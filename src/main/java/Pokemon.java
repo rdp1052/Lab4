@@ -73,6 +73,25 @@ public class Pokemon {
     }
 
     /**
+     *
+     * Creates a new Pokemon with specified values for all traits.
+     *
+     * @param setHP self-explanatory
+     * @param setAttack self-explanatory
+     * @param setDefense self-explanatory
+     * @param setName self-explanatory
+     */
+    public Pokemon(final String setName, final int setHP, final int setAttack, final int setDefense) {
+        final int d6num = 6;
+        final int d20num = 20;
+        this.d6 = new Dice(d6num);
+        this.d20 = new Dice(d20num);
+        hitPoints = setHP;
+        attackLevel = setAttack;
+        defenseLevel = setDefense;
+        name = setName;
+    }
+    /**
      * Attack another Pokemon.
      * <p>
      * Calling this method will cause this Pokemon to attack another Pokemon as follows:
